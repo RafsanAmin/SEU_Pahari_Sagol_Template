@@ -1,0 +1,58 @@
+\chapter{Graph}
+
+\section{Shortest paths}
+	\kactlimport{BFS.h}
+	\kactlimport{Dijkstra.h}
+	\kactlimport{BellmanFord.h}
+	\kactlimport{FloydWarshall.h}
+
+\section{Structure}
+	\kactlimport{Bipartite.h}
+	\kactlimport{FindCycle.h}
+	\kactlimport{TopoSort.h}
+	\kactlimport{SCC.h}
+	\kactlimport{TwoSat.h}
+	\kactlimport{BridgesCuts.h}
+	\optimport{BiconnectedComponents.h}
+	\kactlimport{Kruskal.h}
+	\kactlimport{EulerWalk.h}
+	\advimport{DirectedMST.h}
+	\advimport{EdgeColoring.h}
+
+\section{Flows and matching}
+	\kactlimport{Dinic.h}
+	\kactlimport{MCMF.h}
+	\advimport{MCMFFast.h}
+	\advimport{PushRelabel.h}
+	\advimport{GlobalMinCut.h}
+	\advimport{GomoryHu.h}
+	\kactlimport{HopcroftKarp.h}
+	\optimport{DFSMatching.h}
+	\optimport{MinimumVertexCover.h}
+	\optimport{WeightedMatching.h}
+	\optimport{GeneralMatching.h}
+	\textbf{Facts:} max flow = min cut. Min path cover of a DAG (vertex-disjoint) =
+	$n -$ max matching on (out-copy, in-copy). Edge-disjoint paths = max flow with
+	capacities 1. Node capacities: split $v$ into $v_{in} \to v_{out}$.
+	Hall: a left-perfect matching exists iff $|N(S)| \ge |S|$ for every left set $S$.
+
+\section{Trees}
+	\kactlimport{EulerTour.h}
+	\kactlimport{TreeDiameter.h}
+	\kactlimport{LCA.h}
+	\optimport{VirtualTree.h}
+	\kactlimport{HLD.h}
+	\kactlimport{Centroid.h}
+	\kactlimport{Reroot.h}
+	\advimport{LinkCutTree.h}
+	\textbf{Diameter:} BFS from any node to the farthest $a$, then BFS from $a$
+	to the farthest $b$; $a$--$b$ is a diameter. \textbf{Center}: middle of the diameter.
+	\textbf{Small to large:} merge child sets into the largest one, $O(n \log n)$ inserts.
+	\textbf{Euler tour:} subtree of $v$ = $[tin_v, tout_v]$; path sums via $+a$ at $tin$, $-a$ at $tout+1$.
+
+\ifkactladvanced
+\section{Cliques}
+	\advimport{MaximalCliques.h}
+	\advimport{MaximumClique.h}
+	\advimport{MaximumIndependentSet.h}
+\fi

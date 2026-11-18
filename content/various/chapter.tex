@@ -1,0 +1,28 @@
+\chapter{DP and misc}
+
+\kactlimport{LIS.h}
+\kactlimport{Inversions.h}
+\kactlimport{DivideConquerDP.h}
+\optimport{KnuthDP.h}
+\kactlimport{SOS.h}
+\kactlimport{DigitDP.h}
+\kactlimport{Misc.h}
+\optimport{IntervalContainer.h}
+\optimport{IntervalCover.h}
+\advimport{ConstantIntervals.h}
+\advimport{FastKnapsack.h}
+\optimport{FastInput.h}
+\advimport{FastMod.h}
+\advimport{BumpAllocator.h}
+
+\section{DP optimisation notes}
+	\textbf{Knuth:} $dp[i][j] = \min_{i \le k < j}(dp[i][k] + dp[k+1][j]) + C(i,j)$ with
+	$opt[i][j-1] \le opt[i][j] \le opt[i+1][j]$ (holds if $C$ is monotone and satisfies the
+	quadrangle inequality): loop $k$ only in that range, $O(n^2)$ total.
+
+	\textbf{Convex hull trick:} $dp[i] = \min_j (m_j x_i + b_j)$: LineContainer or LiChao.
+
+	\textbf{Knapsack:} 0/1: loop capacity downwards; unbounded: upwards. Bounded
+	counts: split $c$ into $1,2,4,\dots$ items. Subset-sum feasibility: \texttt{bitset<N> b; b |= b << w;}
+
+	\textbf{Bitmask DP:} $dp[mask][v]$ (TSP, Hamiltonian path) is $O(2^n n^2)$; fine for $n \le 20$.

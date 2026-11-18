@@ -1,0 +1,68 @@
+Compile: g++ -std=c++17 -O2 -Wall -Wextra -Wshadow -DLOCAL
+  -fsanitize=address,undefined -D_GLIBCXX_DEBUG -g a.cpp
+  (drop -D_GLIBCXX_DEBUG with pb_ds: it becomes very slow)
+
+Kattis (SCUSA):
+One test per input unless the statement says otherwise.
+"Read until EOF": while (cin >> x) { ... }
+Compile errors cost no penalty; each other rejection +20 min.
+Output must match exactly; floats: print enough digits
+  (cout << fixed << setprecision(9)).
+
+Pre-submit:
+Write a few simple test cases if sample is not enough.
+Are time limits close? If so, generate max cases.
+Is the memory usage fine?
+Could anything overflow? (1e5 * 1e5 needs ll; use 1LL*)
+Multi-test: did you reset ALL globals / arrays?
+Make sure to submit the right file.
+
+Wrong answer:
+Print your solution! Print debug output, as well.
+Are you clearing all data structures between test cases?
+Can your algorithm handle the whole range of input?
+Read the full problem statement again.
+Do you handle all corner cases correctly? (n = 1, all equal)
+Have you understood the problem correctly?
+Any uninitialized variables?
+Any overflows? Is INF big enough / too big (INF + INF)?
+Confusing N and M, i and j, etc.?
+Off by one: inclusive [l, r] everywhere in this notebook.
+Are you sure your algorithm works?
+What special cases have you not thought of?
+Are you sure the STL functions you use work as you think?
+Add some assertions, maybe resubmit.
+Write a brute force and run stress.sh.
+Go through the algorithm for a simple case.
+Explain your algorithm to a teammate.
+Ask the teammate to look at your code.
+Go for a small walk, e.g. to the toilet.
+Is your output format correct? (including whitespace)
+Rewrite your solution from the start or let a teammate do it.
+
+Runtime error:
+Have you tested all corner cases locally?
+Any uninitialized variables?
+Are you reading or writing outside the range of any vector?
+Any assertions that might fail?
+Any possible division by 0? (mod 0 for example)
+Any possible infinite recursion? Recursion too deep?
+Invalidated pointers or iterators? (push_back while
+  holding a reference into the same vector)
+Are you using too much memory?
+
+Time limit exceeded:
+Do you have any possible infinite loops?
+What is the complexity of your algorithm?
+Are you copying a lot of unnecessary data? (pass by &)
+How big is the input and output? (no endl, use '\n')
+Avoid vector, map. (use arrays/unordered_map)
+memset/fill of a big array inside a multi-test loop?
+What do your teammates think about your algorithm?
+Last resort:
+  #pragma GCC optimize("O3,unroll-loops")
+  #pragma GCC target("avx2,bmi,bmi2,popcnt,lzcnt")
+
+Memory limit exceeded:
+What is the max amount of memory your algorithm should need?
+Are you clearing all data structures between test cases?

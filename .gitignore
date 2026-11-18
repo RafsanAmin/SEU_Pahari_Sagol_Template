@@ -1,0 +1,5 @@
+build/
+tests/bin/
+header.tmp
+build_lint.tmp
+*.exe

@@ -1,0 +1,38 @@
+% Full contest notebook: core + optional snippets, without the over-advanced
+% \advimport ones. 25 pages: fits the World Finals / NAC limit. SCUSA 2026
+% has no page limit, so print library.pdf there.
+\documentclass[9pt, a4paper, notitlepage]{extreport}
+\usepackage{kactlpkg}
+\kactlcontentdir{content}
+\kactloptionaltrue
+
+% EDIT: your details
+\university{SEU}{St. Edward's University}{}
+\team{SEU\_Pahari\_Sagol}{Rafsan, Mayukh, Ian}
+\contest{ICPC South Central USA Regional 2026}{November 7, 2026}
+\subtitle{Team Notebook}
+\title{Team Notebook}
+
+\begin{document}
+	\maketeampage
+	\begin{multicols*}{3}
+	\thispagestyle{fancy}
+	\setcounter{tocdepth}{0}
+	\tableofcontents
+
+	\kactlchapter{contest}
+	\kactlchapter{math}
+	\kactlchapter{data-structures}
+	\kactlchapter{number-theory}
+	\kactlchapter{combinatorial}
+	\kactlchapter{graph}
+	\kactlchapter{strings}
+	\kactlchapter{various}
+	\kactlchapter{numerical}
+	\kactlchapter{geometry}
+	\end{multicols*}
+
+	\begin{multicols*}{3}
+	\kactlchapter{appendix}
+	\end{multicols*}
+\end{document}

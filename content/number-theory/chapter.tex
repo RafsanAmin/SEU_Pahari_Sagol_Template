@@ -1,0 +1,25 @@
+\chapter{Number theory}
+% Theory (gcd, Fermat/Euler, divisor functions, primitive roots, ...) is in
+% the Mathematics chapter, section "Number theory".
+
+\section{Modular arithmetic}
+	\kactlimport{ModInt.h}
+	\kactlimport{Euclid.h}
+	\kactlimport{CRT.h}
+	\kactlimport{ModLog.h}
+	\optimport{ModPow.h}
+	\advimport{ModSqrt.h}
+	\advimport{ModSum.h}
+
+\section{Primes and divisors}
+	\kactlimport{Sieve.h}
+	\kactlimport{SegmentedSieve.h}
+	\advimport{FastEratosthenes.h}
+	\kactlimport{Factorize.h}
+	\kactlimport{PollardRho.h}
+
+\ifkactladvanced
+\section{Fractions}
+	\advimport{ContinuedFractions.h}
+	\advimport{FracBinarySearch.h}
+\fi

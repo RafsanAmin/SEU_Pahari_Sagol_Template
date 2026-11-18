@@ -1,0 +1,64 @@
+\chapter{Combinatorial}
+
+\kactlimport{Combinatorics.h}
+\optimport{IntPerm.h}
+\optimport{multinomial.h}
+
+\section{Counting basics}
+	\textbf{Stars and bars:} $x_1+\dots+x_k=n$, $x_i \ge 0$: $\binom{n+k-1}{k-1}$;
+	with $x_i \ge 1$: $\binom{n-1}{k-1}$. Multisets of size $k$ from $n$ types: $\binom{n+k-1}{k}$.
+
+	\textbf{Inclusion-exclusion:} $|\bigcup A_i| = \sum_{\emptyset\ne S}(-1)^{|S|+1}|\bigcap_{i\in S}A_i|$.
+	Surjections $n \to k$: $\sum_{j=0}^{k}(-1)^j\binom{k}{j}(k-j)^n$.
+
+	\textbf{Identities:} $\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}$,
+	$\sum_k \binom{n}{k}^2=\binom{2n}{n}$, $\sum_{i=0}^{n}\binom{i}{k}=\binom{n+1}{k+1}$ (hockey stick),
+	$\sum_k\binom{m}{k}\binom{n}{r-k}=\binom{m+n}{r}$ (Vandermonde).
+	Grid paths $(0,0)\to(a,b)$: $\binom{a+b}{a}$. Multinomial: $\frac{n!}{k_1!\cdots k_m!}$.
+
+	\textbf{Lucas:} $p$ prime, write $n, m$ in base $p$: $\binom{n}{m} \equiv \prod_i\binom{n_i}{m_i} \pmod p$.
+	$\binom{n}{m}$ is odd iff $m \,\&\, n = m$.
+
+\section{Permutations}
+	\textbf{Derangements:} $D(n) = (n-1)(D(n-1)+D(n-2)) = nD(n-1)+(-1)^n = \lfloor n!/e \rceil$.
+	$D = 1, 0, 1, 2, 9, 44, 265, 1854, 14833$.
+
+	\textbf{Burnside:} \#objects up to symmetry $= \frac{1}{|G|}\sum_{g\in G}|X^g|$
+	($X^g$ = elements fixed by $g$). Necklaces with $n$ beads, $k$ colors, rotation only:
+	$\frac1n\sum_{d\mid n}\phi(n/d)k^d$.
+
+	\textbf{Cycles:} Permutation of order $\text{lcm}$(cycle lengths). Number of swaps to sort $= n - \#$cycles.
+
+\section{Partitions and subsets}
+	\textbf{Partitions} of $n$ (unordered sums):
+	$p(0)=1,\ p(n)=\sum_{k\ne0}(-1)^{k+1}p(n-k(3k-1)/2)$.
+	$p = 1,1,2,3,5,7,11,15,22,30$; $p(20)=627$, $p(50)\approx2\cdot10^5$, $p(100)\approx2\cdot10^8$.
+
+	\textbf{Stirling 2nd kind} $S(n,k)$: partitions of $n$ labeled items into $k$
+	non-empty groups. $S(n,k)=S(n-1,k-1)+kS(n-1,k)$,
+	$S(n,k)=\frac1{k!}\sum_{j=0}^k(-1)^{k-j}\binom kj j^n$.
+
+	\textbf{Stirling 1st kind} $c(n,k)$: permutations of $n$ with $k$ cycles.
+	$c(n,k)=c(n-1,k-1)+(n-1)c(n-1,k)$.
+
+	\textbf{Bell} (all set partitions): $1,1,2,5,15,52,203,877,4140,21147$.
+	$B(n+1)=\sum_k\binom nk B(k)$.
+
+\section{General numbers}
+	\textbf{Catalan:} $C_n=\frac1{n+1}\binom{2n}{n}=\binom{2n}{n}-\binom{2n}{n+1}$,
+	$C_{n+1}=\sum_i C_iC_{n-i}$. $C = 1,1,2,5,14,42,132,429,1430,4862,16796$.
+	Counts: balanced bracket strings with $n$ pairs, monotone paths under the diagonal,
+	binary trees with $n$ nodes, triangulations of an $(n+2)$-gon,
+	permutations avoiding 123.
+
+	\textbf{Trees:} labeled trees on $n$ nodes: $n^{n-2}$ (Cayley); with degrees $d_i$:
+	$\frac{(n-2)!}{\prod(d_i-1)!}$; forest of $k$ trees with sizes $n_i$ joined: $n_1\cdots n_k n^{k-2}$.
+
+	\textbf{Fibonacci:} $F_{n+m}=F_mF_{n+1}+F_{m-1}F_n$, $\gcd(F_m,F_n)=F_{\gcd(m,n)}$.
+
+\section{Factorials}
+\begin{tabular}{c|c@{\ }c@{\ }c@{\ }c@{\ }c@{\ }c@{\ }c@{\ }c@{\ }c}
+$n$  & 5 & 6 & 7 & 8 & 9 & 10 & 12 & 15 & 20\\
+\hline
+$n!$ & 120 & 720 & 5040 & 4e4 & 3.6e5 & 3.6e6 & 4.8e8 & 1.3e12 & 2.4e18\\
+\end{tabular}

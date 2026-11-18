@@ -1,0 +1,58 @@
+Read constraints first: n <= 10 -> n!, 20 -> 2^n,
+40 -> meet in the middle, 500 -> n^3, 5000 -> n^2,
+1e5..1e6 -> n log n, 1e18 -> log n / math / matrix power.
+
+Arrays / greedy
+	Prefix sums, difference arrays (range add offline)
+	Two pointers / sliding window, monotone stack / deque
+	Sort + sweep, events (+1 at l, -1 at r + 1)
+	Exchange argument for sorting comparators
+	Binary search on the answer (firstTrue)
+	Contribution technique: sum over elements of (#times counted)
+	Max subarray sum (Kadane), MEX tricks, pigeonhole
+	Coordinate compression
+	Bitset optimisation (n^2 / 64)
+	Sqrt decomposition, Mo's algorithm
+	Meet in the middle
+Graphs
+	BFS (unweighted), 0-1 BFS, Dijkstra, Bellman-Ford, Floyd
+	Multi-source BFS, BFS on states (node, extra info)
+	DFS tree: back edges, bridges, articulation points
+	Topological sort, DP on DAG, SCC condensation
+	2-SAT for binary choices with pairwise constraints
+	DSU: offline connectivity, Kruskal, merging answers
+	Bipartite check (2-colouring), matching, Konig
+	Max flow / min cut, MCMF for assignment
+	Euler path, functional graphs (cycle + trees)
+Trees
+	Euler tour + segment tree for subtree queries
+	LCA / binary lifting (also path max), HLD for path updates
+	Rerooting, DP on subtrees, small-to-large merging
+	Centroid decomposition for counting paths
+	Diameter, centre, tree isomorphism by hashing
+DP
+	Knapsack, LIS, LCS, edit distance, intervals, digits
+	Bitmask DP, SOS DP, DP over subsets (3^n)
+	DP on trees, DP with probabilities / expectations
+	Optimisations: prefix minima, monotone deque, CHT /
+	Li Chao, divide & conquer, Knuth
+	Reduce state: store the min/max instead of a dimension
+Math
+	gcd / lcm, sieve, factorisation, divisors
+	Modular inverse, nCr, inclusion-exclusion, Burnside
+	Matrix exponentiation for linear recurrences
+	Expected value by linearity, symmetry arguments
+	Game theory: Grundy numbers, Nim, mirror strategy
+	Gaussian elimination, XOR basis
+	FFT / NTT for counting pair sums
+Strings
+	Hashing (compare substrings in O(1), binary search LCP)
+	KMP / Z (pattern, period, border), Manacher
+	Trie (+ binary trie for XOR), Aho-Corasick
+	Suffix array + LCP, suffix automaton
+Geometry
+	Cross product for orientation, integer arithmetic
+	Convex hull, sweep line, angle sort, Pick's theorem
+Interactive
+	Flush after every query (cout << endl). Binary search /
+	ternary search. Count queries carefully.

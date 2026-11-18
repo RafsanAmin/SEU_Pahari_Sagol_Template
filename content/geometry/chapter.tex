@@ -1,0 +1,48 @@
+\chapter{Geometry}
+
+\section{Primitives}
+	\kactlimport{Point.h}
+	\kactlimport{sideOf.h}
+	\kactlimport{OnSegment.h}
+	\kactlimport{SegmentDistance.h}
+	\kactlimport{SegmentIntersection.h}
+	\kactlimport{lineIntersection.h}
+	\optimport{lineDistance.h}
+	\optimport{LineProjectionReflection.h}
+	\optimport{linearTransformation.h}
+	\optimport{Angle.h}
+	\kactlimport{AngleSort.h}
+
+\section{Circles}
+	\kactlimport{CircleIntersection.h}
+	\kactlimport{CircleLine.h}
+	\kactlimport{circumcircle.h}
+	\kactlimport{MinimumEnclosingCircle.h}
+	\optimport{CircleTangents.h}
+	\optimport{CirclePolygonIntersection.h}
+
+\section{Polygons}
+	\kactlimport{PolygonArea.h}
+	\kactlimport{InsidePolygon.h}
+	\kactlimport{ConvexHull.h}
+	\kactlimport{HullDiameter.h}
+	\kactlimport{PointInsideHull.h}
+	\optimport{LineHullIntersection.h}
+	\optimport{PolygonCenter.h}
+	\optimport{PolygonCut.h}
+	\optimport{PolygonUnion.h}
+	\kactlimport{ClosestPair.h}
+	\optimport{ManhattanMST.h}
+	\advimport{kdTree.h}
+	\advimport{FastDelaunay.h}
+	\textbf{Pick:} lattice polygon area $A = I + B/2 - 1$ ($I$ interior, $B$ boundary
+	lattice points; $B = \sum \gcd(|dx|,|dy|)$ over edges). \textbf{Euler:} $V - E + F = 2$
+	for connected planar graphs (counting the outer face).
+
+\ifkactloptional
+\section{3D}
+	\optimport{Point3D.h}
+	\optimport{3dHull.h}
+	\optimport{PolyhedronVolume.h}
+	\optimport{sphericalDistance.h}
+\fi
